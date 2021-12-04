@@ -1,0 +1,9 @@
+@media(max-width: 960px) {
+    .biografia {
+        flex-direction: column;
+        align-items: center;
+    }
+    .all-cubes {
+        flex-direction: column;
+    }
+}
