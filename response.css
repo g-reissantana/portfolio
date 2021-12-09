@@ -3,7 +3,30 @@
         flex-direction: column;
         align-items: center;
     }
+    .biografia h1 {
+        font-size: 21px;
+    }
     .all-cubes {
         flex-direction: column;
+        gap: 120px;
+    }
+
+    
+
+    #habilidades .skills {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills ul li {
+        flex-direction: column;
+    }
+    .skill-bar {
+        width: 250px;
+    }
+    .skill-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
