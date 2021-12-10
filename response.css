@@ -1,10 +1,18 @@
 @media(max-width: 960px) {
+
+    .menu {
+        display: none;
+    }
+    .menu-mobile-icon {
+        display: flex;
+    }
+
     .biografia {
         flex-direction: column;
         align-items: center;
-    }
-    .biografia h1 {
-        font-size: 21px;
+
+        height: 430px;
+        margin-top: 90px;
     }
     .all-cubes {
         flex-direction: column;
@@ -28,5 +36,17 @@
     .skill-icon {
         margin-right: 0;
         margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 480px) {
+    #inicio h3 {
+        font-size: 14.5px;
+    }
+}
+
+@media(max-width: 360px) {
+    #inicio h3 {
+        font-size: 12.9px;
     }
 }

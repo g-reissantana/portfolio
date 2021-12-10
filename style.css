@@ -5,9 +5,14 @@
     font-family: 'Press Start 2P', cursive;
 */
 
-
 :root {
     --gradient: linear-gradient(20deg,#1037ac, #01f2f5); 
+    --primary-color: var(--purple);
+    --second-color: var(--blue-light);
+
+    --pink: #F25A70;
+    --purple: #7C5E99;
+    --blue-light: #01c2e2;
 }
 
 * {
@@ -31,8 +36,9 @@ ul {
 }
 
 body {
+    max-width: 100vw;
     min-height: 100vh;
-    background-color: #7C5E99;
+    background-color: var(--primary-color);
     
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
@@ -49,7 +55,7 @@ header {
     left: 0;
     right: 0;
 
-    background-color: #7C5E99;
+    background-color: var(--primary-color);
     box-shadow: 0 4px 17px #000;
 
     width: 100vw;
@@ -62,8 +68,8 @@ header {
 
 /* ---------- LOGO ---------- */
 .logo {
-    width: 55px;
-    height: 55px;
+    width: 49px;
+    height: 49px;
 
     display: flex;
     align-items: center;
@@ -93,7 +99,7 @@ nav {
 .menu ul li {
     border-radius: 10px;
     background-color: rgba(1, 193, 226, 1);
-    background: #F25A70;
+    background: var(--second-color);
 }
 
 .menu a {
@@ -113,6 +119,110 @@ nav {
     background: rgb(16, 55, 172, .5);
 }
 
+/* ---------- MENU MOBILE ---------- */
+
+.open {
+    width: 100% !important;
+}
+
+.menu-mobile-icon {
+    z-index: 999;
+
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+
+    cursor: pointer;
+  
+    margin-right: 47px;
+    cursor: pointer;
+
+}
+
+.menu-mobile-icon div {
+    width: 37px;
+    height: 5px;
+
+    border-radius: 2px;
+
+    background-color: #01C0E1;
+    transition: 0.4s;
+}
+
+.change-bars .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  /* Fade out the second bar */
+  .change-bars .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change-bars .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(124, 94, 153, .7);
+
+    width: 0%;
+    max-width: 300px;
+
+    transition: 0.7s linear;
+}
+
+.menu-mobile li {
+    height: 100%;
+}
+
+.menu-mobile a {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    width: 90%;
+    
+    padding: 15px 5px;
+    
+    border-left: 5px solid transparent;
+    
+    color: #fff;
+    background-color: transparent;
+    transition: 0.5s;
+    
+    font-family: 'Press Start 2P';
+    font-weight: bold;
+    font-size: 13px;
+}
+.menu-mobile .nave {
+    transform: rotate(90deg);
+
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+
+    animation: nave 2s infinite linear;
+}
+.menu-mobile a:hover {
+    border-left: 5px solid var(--second-color);
+}
+
+@keyframes nave {
+    from {
+        transform: rotate(90deg) rotateY(0deg);
+    } to {
+        transform: rotate(90deg) rotateY(360deg);
+    }
+}
 
 /* ---------- Quem sou ? ---------- */
 
@@ -130,14 +240,13 @@ main .container {
 
     border-radius: 5px;
 
-    padding-bottom: 200px;
-    margin-bottom: 200px;
+    
 
 }
 
-#quem-sou {    
+#inicio {    
     width: 100vw;
-    background-color: #F25A70;
+    background-color: var(--second-color);
 
     border-top: solid 10px #000;
     border-bottom: solid 10px #000;
@@ -150,10 +259,10 @@ main .container {
 
 }
 
-#quem-sou .text {
+#inicio .text {
     width: 90%;
-    max-width: 400px;
-    height: 180px;
+    max-width: 500px;
+    height: 160px;
 
     padding: 10px 15px;
 
@@ -162,24 +271,26 @@ main .container {
     box-shadow: 8px 8px 0 #000;
 }
 
-#quem-sou .text h1 {
+#inicio .text h1 {
     margin: 15px 0;
-    color: #7C5E99;
+    color: var(--primary-color);
     filter: brightness(1.5);
 
     text-shadow: 4px 4px 0 #000;
 }
-#quem-sou h3 {
+#inicio h3 {
     color: #fff;
     margin: 25px 0;
 
     text-shadow: 2px 2px 0 #000;
+    font-size: 19px;
 }
 
 /* Quem sou? - Biografia */
 
 .biografia {
     width: 100%;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,15 +301,15 @@ main .container {
 
 .biografia h1 {
     font-family: 'Press Start 2p';
-    font-size: 30px;
+    font-size: 25px;
 }
 
 
 
 .biografia .foto {
     border: solid 5px #000;
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
 
     border-radius: 125px;
     background: url("./assets/eu.jpg");
@@ -207,22 +318,10 @@ main .container {
 
 }
 
-.lead {
-    display: inline;
-    font-weight: bold;
-    color: rgba(0, 0, 0, .7);
-
-    transition: 0.2s;
-}
-.lead:hover {
-    color: rgb(80, 111, 197);
-}
-
 /* ---------- CUBO  ---------- */
 
 .cubes {
-
-    margin-top: 40px;
+    margin-top: 90px;
 
     text-align: center;
     width: 100%;
@@ -245,7 +344,6 @@ main .container {
     justify-content: center;
     gap: 200px;
 
-    margin-top: 40px;
     padding-bottom: 100px;
 }
 
@@ -357,13 +455,12 @@ main .container {
 }
 
 /* ---------- HABILIDADES ---------- */
-/* ------------ HABILIDADES ------------ */
         
 #habilidades {
     padding-top: 100px;
 
     color: #fff;
-    background: #7C5E99;
+    background: var(--primary-color);
     font-family: 'Press Start 2P';
 
     display:flex;
@@ -426,5 +523,22 @@ main .container {
 .skill-bar div {
     width: var(--percent);
     height: 100%;
-    background-color: #F25A70;
+    background-color: var(--second-color);
+}
+
+/* ---------- PORTFOLIO ---------- */
+
+#portfolio {
+    padding-top: 105px;
+
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+
+.none {
+    display: none;
 }

@@ -17,28 +17,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">">
 
+    <!-- SCRIPTS -->
+    <script src="./script.js" defer></script>
+
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="./assets/prog_logo_name.png" alt="Logomarca de Pro g Reis">
+            <img src="./assets/prog_logo_name.png" alt="Logomarca de Pro G Reis" />
         </div>
 
         <nav class="menu">
             <ul>
-                <li><a href="#quem-sou">Quem sou?</a></li>
+                <li><a href="#inicio">Início</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">Contato</a></li>
-                <li><a href="">Objetivos</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
                 <li><a href="">Projetos</a></li>
             </ul>
         </nav>
+
+        <div class="menu-mobile-icon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="menu-mobile">
+            <nav>
+                <ul>
+                    <li data-id="inicio">
+                        <a href="#inicio">
+                            <img data-id="inicio" class="nave none" src="./assets/nave.png">
+                            Início
+                        </a>
+                    </li>
+                    <li data-id="habilidades">
+                        <a href="#habilidades">
+                            <img data-id="habilidades" class="nave none" src="./assets/nave.png">
+                            Habilidades
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">
+                            <img class="nave none" src="./assets/nave.png">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sobre">
+                            <img class="nave none" src="./assets/nave.png">
+                            Sobre
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contato">
+                            <img class="nave none" src="./assets/nave.png">
+                            Contato
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="nave none" src="./assets/nave.png">
+                            Projetos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
     </header>
 
     <main>
         <div class="container">
-            <div id="quem-sou">
+            <div id="inicio">
 
                 <div class="biografia">
                     <div class="foto">
@@ -47,7 +100,7 @@
                     <div class="text">
                         <h1>Gabriel&nbsp;Reis</h1>
                         <h3>Level: 20</h3>
-                        <h3>Aracaju - SE</h3>
+                        <h3><span>Front End</span> | Designer</h3>
                         
                     </div>
                 </div>
@@ -256,7 +309,17 @@
                 </div>
             </div>
 
+            <div id="portfolio">
+                PORTFOLIO
+            </div>
 
+            <div id="sobre">
+                SOBRE MIM
+            </div>
+
+            <footer id="contato">
+                RODAPE
+            </footer>
         </div>
     </main>
 
