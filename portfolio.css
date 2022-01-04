@@ -1,0 +1,113 @@
+
+#portfolio {
+    background-color: #01C2E2;
+    width: 100vw;
+    min-height: 100vh;
+
+    padding-top: 100px;
+    padding-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-bottom: solid 10px #000;
+}
+
+#portfolio h1 {
+    font-family: 'Press Start 2p';
+    font-size: 25px;
+
+    color: #fff;
+}
+
+.section-projects--photos {
+    margin: 20px 0 30px;
+    width: 100vw;   
+    max-width: 1150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-projects--photo {
+    width: 280px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-projects--photoarea {
+    width: 260px;
+    height: 160px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform .3s;
+}
+
+
+
+.section-projects--photoinfo {
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    color: #f2f2f2;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .8);
+    gap: 10px;
+    
+}
+
+.section-projects--photoarea img {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    width: inherit;
+    height: inherit;
+}
+
+.section-projects--photoinfo p {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 700;
+}
+.section-projects--photoinfo p::first-letter {
+    text-transform: uppercase;
+}
+.section-projects--photoarea:hover {
+    transform: scale(1.1);
+}
+.section-projects--photoarea:hover .section-projects--photoinfo{
+    display: flex;
+}
+
+.project-buttons {
+    margin-top: 20px;
+
+    display: flex;
+    gap: 10px;
+}
+
+.project-buttons a {
+    display: block;
+    border: 2px solid transparent;
+
+    padding: 13px 50px;
+    border-radius: 5px;
+
+    background: #7C5E99;
+    color: #fff;
+
+    font-weight: 600;
+    transition: .3s;
+}
+.project-buttons a:hover {
+    border: 2px solid #7C5E99;
+    background: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}

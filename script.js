@@ -11,5 +11,8 @@ function menuOpened() {
 
 }
 
-menuIcon.addEventListener('click', menuOpened)
+buttonMenu.forEach(item => {
+    item.addEventListener('click', menuOpened)
+})
 
+menuIcon.addEventListener('click', menuOpened)
