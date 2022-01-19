@@ -517,6 +517,9 @@ main .container {
     margin: 40px 0;
 
 }
+.skills ul li:nth-child(3) img {
+    border-radius: 10px;
+}
 
 .skill {
     height: 58px;
@@ -538,11 +541,11 @@ main .container {
     margin-right: 20px;
 }
 
+
 .skill-icon img {
     width: 100%;
     height: auto;
 }
-
 
 .skill-bar {
     border: solid 5px #000;
