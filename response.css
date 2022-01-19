@@ -43,9 +43,17 @@
     }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 540px) {
     #inicio h3 {
         font-size: 14.5px;
+    }
+    footer {
+        flex-direction: column-reverse;
+        gap: 15px;
+        margin: 20px 0;
+    }
+    footer .icons-social {
+        margin-top: 10px;
     }
 }
 
