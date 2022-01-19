@@ -6,13 +6,14 @@
 */
 
 :root {
+    --pink: #F25A70;
+    --purple: #7C5E99;
+    --blue-light: #01c2e2;
+    
     --gradient: linear-gradient(20deg,#1037ac, #01f2f5); 
     --primary-color: var(--purple);
     --second-color: var(--blue-light);
 
-    --pink: #F25A70;
-    --purple: #7C5E99;
-    --blue-light: #01c2e2;
 }
 
 * {
@@ -95,11 +96,22 @@ nav {
     display: flex;
     gap: 10px;
 }
-
 .menu ul li {
+    display: flex;
+    align-items: center;
+}
+.menu ul li a:hover {
+    color: var(--second-color);
+}
+
+.menu ul li:last-child {
     border-radius: 10px;
-    background-color: rgba(1, 193, 226, 1);
     background: var(--second-color);
+}
+.menu ul li:last-child a:hover {
+    color: #fff;
+    background: #0096c7;
+
 }
 
 
@@ -116,10 +128,7 @@ nav {
 
     transition: 0.2s;
 }
-.menu a:hover {
-    color: #fff;
-    background: rgb(16, 55, 172, .5);
-}
+
 
 
 /* ---------- MENU MOBILE ---------- */
@@ -260,15 +269,26 @@ main .container {
     align-items: center;
     flex-direction: column;
 
-
 }
 
-#inicio .text {
+#inicio .bio-icons {
+    display: flex;
+    gap: 15px;
+
+    margin-bottom: 10px;
+}
+#inicio .bio-icons a {
+    width: 30px;
+}
+#inicio .bio-icons img {
+    width: 100%;
+}
+#inicio .bio-info {
     width: 90%;
     max-width: 500px;
-    height: 160px;
-
-    padding: 10px 15px;
+}
+#inicio .text {
+    padding: 10px 15px 1px 15px;
 
     font-family: 'Press Start 2P';
     background-color: #3A4042;
@@ -277,13 +297,13 @@ main .container {
 
 #inicio .text h1 {
     margin: 15px 0;
-    color: var(--primary-color);
+    color: var(--second-color);
     filter: brightness(1.5);
 
     text-shadow: 4px 4px 0 #000;
 }
 #inicio h3 {
-    color: #fff;
+    color: #f2f2f2;
     margin: 25px 0;
 
     text-shadow: 2px 2px 0 #000;
@@ -300,7 +320,7 @@ main .container {
     align-items: center;
     gap: 40px;
 
-    margin-top: 90px;
+    margin-top: 100px;
 }
 
 .biografia h1 {
@@ -312,8 +332,9 @@ main .container {
 
 .biografia .foto {
     border: solid 5px #000;
-    width: 230px;
-    height: 230px;
+    width: 190px;
+    height: 190px;
+    align-self: flex-end;
 
     border-radius: 125px;
     background: url("./assets/eu.jpg");
@@ -340,6 +361,8 @@ main .container {
 
     color: #fff;
     font-family: 'Press Start 2P';
+
+    text-shadow: 2px 2px 1px #000;
 }
 
 
@@ -510,7 +533,7 @@ main .container {
     align-items: center;
 
     width: 60px;
-    height: 60px;
+    height: 50px;
 
     margin-right: 20px;
 }
@@ -539,19 +562,18 @@ main .container {
     display: none;
 }
 
-.menu ul .contact-me {
+/* .menu ul .contact-me {
     border-radius: 0;
     box-shadow: 2px 2px 1px #000;
 }
 .menu ul .contact-me a {
     border-radius: 0;
-}
+} */
 
 
 
 #contato {
     color: #fff;
-
 }
 
 
@@ -573,4 +595,19 @@ address {
 .icons-social {
     display: flex;
     gap: 15px;
+}
+.icons-social a {
+    width: 28px;
+}
+.icons-social a img {
+    width: 100%;
+}
+.icons-social a:hover, .bio-icons a:hover {
+    animation: iconAnimation .5s;
+    transform: translateY(-9px);
+}
+
+@keyframes iconAnimation {
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(-9px);}
 }
