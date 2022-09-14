@@ -4,6 +4,17 @@ const menuMobile = document.querySelector('.menu-mobile')
 const buttonMenu = menuMobile.querySelectorAll('li')
 const menuNave = menuMobile.querySelectorAll('img')
 
+const modal = document.querySelector('.modal')
+
+
+window.onload = () => {
+    console.log('ola')
+}
+
+modal.addEventListener('click', () => {
+    modal.style.display = 'none'
+})
+
 function menuOpened() {
 
     menuIcon.classList.toggle('change-bars')
